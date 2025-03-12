@@ -1,0 +1,76 @@
+name: バグ報告
+description: バグ報告を作成する
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        バグ報告ありがとうございます。以下の項目を記入してください。
+
+  - type: textarea
+    id: description
+    attributes:
+      label: バグの説明
+      description: バグの内容について説明してください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 再現手順
+      description: バグを再現するための手順をできるだけ詳しく説明してください。
+      placeholder: |
+        1. 〇〇に移動
+        2. 〇〇をクリック
+        3. 〇〇までスクロール
+        4. エラーを確認
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待される動作
+      description: 本来期待される動作について説明してください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: スクリーンショット
+      description: 可能であれば、スクリーンショットを追加してください。
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: OS
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - iOS
+        - Android
+        - その他
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: ブラウザ
+      description: 使用しているブラウザを記入してください
+      placeholder: 例：Chrome 120.0.0
+
+  - type: input
+    id: device
+    attributes:
+      label: 機種（スマートフォンの場合）
+      placeholder: 例：iPhone 16
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: その他
+      description: 問題に関する追加の情報があれば記入してください。
